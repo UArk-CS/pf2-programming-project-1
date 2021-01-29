@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "Review.h"
 using namespace std;
 
 void commandMenu(int &menuChoice);
@@ -25,6 +26,7 @@ int main() {
             case 1:
                 // New review
                 cout << "New review case" << endl;
+                newReviewMenu();
                 break;
             case 2:
                 // Print specified restaurant reviews
@@ -79,6 +81,49 @@ void commandMenu(int &menuChoice) {
 
 void newReviewMenu() {
 
+    string reviewerName;
+    string restaurantName;
+    string foodCategory;
+    int deliveryTimeRating = 0;
+    int foodQualityRating = 0;
+    int overallSatisfactionRating = 0;
+    float deliveryCost = 0.0;
 
+    Review review;
+
+    cout << "New Review:" << endl;
+
+    // Flush cin buffer
+    cin.ignore();
+
+    cout << "\tYour name: > ";
+    getline(cin, reviewerName);
+    review.setReviewerName(reviewerName);
+
+    cout << "\tRestaurant Name: > ";
+    getline(cin, restaurantName);
+    review.setRestaurantName(restaurantName);
+
+    cout << "\tFood Category: > ";
+    getline(cin, foodCategory);
+    review.setFoodCategory(foodCategory);
+
+    cout << "\tDelivery Cost: > $";
+    cin >> deliveryCost;
+    review.setDeliveryCost(deliveryCost);
+
+    cout << "\tDelivery Time Rating (1-10): > ";
+    cin >> deliveryTimeRating;
+    review.setDeliveryTimeRating(deliveryTimeRating);
+
+    cout << "\tFood Quality Rating (1-10): > ";
+    cin >> foodQualityRating;
+    review.setFoodQualityRating(foodQualityRating);
+
+    cout << "\tOverall Satisfaction (1-10): > ";
+    cin >> overallSatisfactionRating;
+    review.setOverallSatisfactionRating(overallSatisfactionRating);
+
+    review.print();
 
 }
