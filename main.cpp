@@ -3,13 +3,15 @@
 //
 
 #include <iostream>
-#include "Review.h"
+#include "ReviewDB.h"
 using namespace std;
 
 void commandMenu(int &menuChoice);
-void newReviewMenu();
+void newReviewMenu(ReviewDB &foodieReviews);
 
 int main() {
+
+    ReviewDB foodieReviews;
 
     bool stop = false;
     int menuChoice = 0;
@@ -26,7 +28,7 @@ int main() {
             case 1:
                 // New review
                 cout << "New review case" << endl;
-                newReviewMenu();
+                newReviewMenu(foodieReviews);
                 break;
             case 2:
                 // Print specified restaurant reviews
@@ -79,7 +81,7 @@ void commandMenu(int &menuChoice) {
 
 }
 
-void newReviewMenu() {
+void newReviewMenu(ReviewDB &foodieReviews) {
 
     string reviewerName;
     string restaurantName;
@@ -107,6 +109,9 @@ void newReviewMenu() {
     cout << "\tFood Category: > ";
     getline(cin, foodCategory);
     review.setFoodCategory(foodCategory);
+
+    cout << endl;
+    cout << "!!! If invalid numbers are inputted a default value will be used instead !!!" << endl;
 
     cout << "\tDelivery Cost: > $";
     cin >> deliveryCost;
@@ -136,6 +141,7 @@ void newReviewMenu() {
     }
     review.setOverallSatisfactionRating(overallSatisfactionRating);
 
+    foodieReviews.insertReview(review);
     review.print();
 
 }

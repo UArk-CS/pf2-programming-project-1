@@ -18,25 +18,25 @@ public:
 
     // Getters and Setters
     const string &getReviewerName() const;
-    void setReviewerName(const string &reviewerName);
+    void setReviewerName(const string &reviewerName_);
 
     const string &getRestaurantName() const;
-    void setRestaurantName(const string &restaurantName);
+    void setRestaurantName(const string &restaurantName_);
 
     const string &getFoodCategory() const;
-    void setFoodCategory(const string &foodCategory);
+    void setFoodCategory(const string &foodCategory_);
 
     float getDeliveryCost() const;
-    void setDeliveryCost(float deliveryCost);
+    void setDeliveryCost(float deliveryCost_);
 
     int getDeliveryTimeRating() const;
-    void setDeliveryTimeRating(int deliveryTimeRating);
+    void setDeliveryTimeRating(int deliveryTimeRating_);
 
     int getFoodQualityRating() const;
-    void setFoodQualityRating(int foodQualityRating);
+    void setFoodQualityRating(int foodQualityRating_);
 
     int getOverallSatisfactionRating() const;
-    void setOverallSatisfactionRating(int overallSatisfactionRating);
+    void setOverallSatisfactionRating(int overallSatisfactionRating_);
 
     // Print
     void print() const;

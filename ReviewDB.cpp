@@ -1,22 +1,28 @@
 //
-// Created by Ben on 2/3/2021.
+// Created by Ben Worthington on 2/3/2021.
 //
 
 #include "ReviewDB.h"
 
 ReviewDB::ReviewDB() {
-
+    numOfReviews = 0;
 }
 
-ReviewDB::ReviewDB(const ReviewDB &copy) {
+ReviewDB::~ReviewDB() {}
 
-}
+void ReviewDB::insertReview(Review &review_) {
 
-ReviewDB::~ReviewDB() {
+    if (numOfReviews < MAX_REVIEWDB_SIZE) {
 
-}
+        reviews[numOfReviews] = review_;
+        numOfReviews++;
 
-void ReviewDB::insertReview() {
+    } else {
+
+        cout << "Sorry! Ben's Foodie Review database is full! Whoops..." << endl;
+
+    }
+
 
 }
 

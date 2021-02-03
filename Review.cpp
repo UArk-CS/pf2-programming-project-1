@@ -34,56 +34,56 @@ const string &Review::getReviewerName() const {
     return reviewerName;
 }
 
-void Review::setReviewerName(const string &reviewerName) {
-    Review::reviewerName = reviewerName;
+void Review::setReviewerName(const string &reviewerName_) {
+    Review::reviewerName = reviewerName_;
 }
 
 const string &Review::getRestaurantName() const {
     return restaurantName;
 }
 
-void Review::setRestaurantName(const string &restaurantName) {
-    Review::restaurantName = restaurantName;
+void Review::setRestaurantName(const string &restaurantName_) {
+    Review::restaurantName = restaurantName_;
 }
 
 const string &Review::getFoodCategory() const {
     return foodCategory;
 }
 
-void Review::setFoodCategory(const string &foodCategory) {
-    Review::foodCategory = foodCategory;
+void Review::setFoodCategory(const string &foodCategory_) {
+    Review::foodCategory = foodCategory_;
 }
 
 float Review::getDeliveryCost() const {
     return deliveryCost;
 }
 
-void Review::setDeliveryCost(float deliveryCost) {
-    Review::deliveryCost = deliveryCost;
+void Review::setDeliveryCost(float deliveryCost_) {
+    Review::deliveryCost = deliveryCost_;
 }
 
 int Review::getDeliveryTimeRating() const {
     return deliveryTimeRating;
 }
 
-void Review::setDeliveryTimeRating(int deliveryTimeRating) {
-    Review::deliveryTimeRating = deliveryTimeRating;
+void Review::setDeliveryTimeRating(int deliveryTimeRating_) {
+    Review::deliveryTimeRating = deliveryTimeRating_;
 }
 
 int Review::getFoodQualityRating() const {
     return foodQualityRating;
 }
 
-void Review::setFoodQualityRating(int foodQualityRating) {
-    Review::foodQualityRating = foodQualityRating;
+void Review::setFoodQualityRating(int foodQualityRating_) {
+    Review::foodQualityRating = foodQualityRating_;
 }
 
 int Review::getOverallSatisfactionRating() const {
     return overallSatisfactionRating;
 }
 
-void Review::setOverallSatisfactionRating(int overallSatisfactionRating) {
-    Review::overallSatisfactionRating = overallSatisfactionRating;
+void Review::setOverallSatisfactionRating(int overallSatisfactionRating_) {
+    Review::overallSatisfactionRating = overallSatisfactionRating_;
 }
 
 void Review::print() const {
@@ -91,7 +91,7 @@ void Review::print() const {
     cout << "Reviewer Name: " << reviewerName << endl;
     cout << "Restaurant Name: " << restaurantName << endl;
     cout << "Food Category: " << foodCategory << endl;
-    cout << "Delivery Cost: " << deliveryCost << endl;
+    cout << "Delivery Cost: $" << deliveryCost << endl;
     cout << "Delivery Time Rating: " << deliveryTimeRating << endl;
     cout << "Food Quality Rating: " << foodQualityRating << endl;
     cout << "Overall Satisfaction Rating: " << overallSatisfactionRating << endl;
