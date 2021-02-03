@@ -110,18 +110,30 @@ void newReviewMenu() {
 
     cout << "\tDelivery Cost: > $";
     cin >> deliveryCost;
+    if (deliveryCost < 0.0) {
+        deliveryCost = 0.0; // default value
+    }
     review.setDeliveryCost(deliveryCost);
 
     cout << "\tDelivery Time Rating (1-10): > ";
     cin >> deliveryTimeRating;
+    if (deliveryTimeRating < 1 || deliveryTimeRating > 10) {
+        deliveryTimeRating = 1; // default value
+    }
     review.setDeliveryTimeRating(deliveryTimeRating);
 
     cout << "\tFood Quality Rating (1-10): > ";
     cin >> foodQualityRating;
+    if (foodQualityRating < 1 || foodQualityRating > 10) {
+        foodQualityRating = 1; // default value
+    }
     review.setFoodQualityRating(foodQualityRating);
 
     cout << "\tOverall Satisfaction (1-10): > ";
     cin >> overallSatisfactionRating;
+    if (overallSatisfactionRating < 1 || overallSatisfactionRating > 10) {
+        overallSatisfactionRating = 1; // default value
+    }
     review.setOverallSatisfactionRating(overallSatisfactionRating);
 
     review.print();
