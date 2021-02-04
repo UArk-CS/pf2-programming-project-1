@@ -8,7 +8,7 @@
 using namespace std;
 
 void commandMenu(int &menuChoice);
-void newReviewMenu(ReviewDB &foodieReviews);
+void createNewReview(ReviewDB &foodieReviews);
 void getSearchParameter(string &searchParam);
 
 int main() {
@@ -30,7 +30,7 @@ int main() {
 
             case 1:
                 // New review
-                newReviewMenu(foodieReviews);
+                createNewReview(foodieReviews);
                 break;
             case 2:
                 // Print specified restaurant reviews
@@ -107,7 +107,7 @@ void commandMenu(int &menuChoice) {
 
 }
 
-void newReviewMenu(ReviewDB &foodieReviews) {
+void createNewReview(ReviewDB &foodieReviews) {
 
     string reviewerName;
     string restaurantName;
@@ -139,34 +139,47 @@ void newReviewMenu(ReviewDB &foodieReviews) {
     transform(foodCategory.begin(), foodCategory.end(), foodCategory.begin(), ::toupper);
     review.setFoodCategory(foodCategory);
 
-    cout << endl;
-    cout << "!!! If invalid numbers are inputted a default value will be used instead !!!" << endl;
-
     cout << "\tDelivery Cost: > $";
     cin >> deliveryCost;
-    if (deliveryCost < 0.0) {
-        deliveryCost = 0.0; // default value
+    while (deliveryCost < 0.0) {
+
+        cout << "Invalid input. Please enter a real number." << endl;
+        cout << "\tDelivery Cost: > $";
+        cin >> deliveryCost;
+
     }
     review.setDeliveryCost(deliveryCost);
 
     cout << "\tDelivery Time Rating (1-10): > ";
     cin >> deliveryTimeRating;
-    if (deliveryTimeRating < 1 || deliveryTimeRating > 10) {
-        deliveryTimeRating = 1; // default value
+    while (deliveryTimeRating < 1 || deliveryTimeRating > 10) {
+
+       cout << "Invalid input. Please enter a number 1 - 10." << endl;
+       cout << "\tDelivery Time Rating (1-10): > ";
+       cin >> deliveryTimeRating;
+
     }
     review.setDeliveryTimeRating(deliveryTimeRating);
 
     cout << "\tFood Quality Rating (1-10): > ";
     cin >> foodQualityRating;
-    if (foodQualityRating < 1 || foodQualityRating > 10) {
-        foodQualityRating = 1; // default value
+    while (foodQualityRating < 1 || foodQualityRating > 10) {
+
+        cout << "Invalid input. Please enter a number 1 - 10." << endl;
+        cout << "\tFood Quality Rating (1-10): > ";
+        cin >> foodQualityRating;
+
     }
     review.setFoodQualityRating(foodQualityRating);
 
     cout << "\tOverall Satisfaction (1-10): > ";
     cin >> overallSatisfactionRating;
-    if (overallSatisfactionRating < 1 || overallSatisfactionRating > 10) {
-        overallSatisfactionRating = 1; // default value
+    while (overallSatisfactionRating < 1 || overallSatisfactionRating > 10) {
+
+        cout << "Invalid input. Please enter a number 1 - 10." << endl;
+        cout << "\tOverall Satisfaction (1-10): > ";
+        cin >> overallSatisfactionRating;
+
     }
     review.setOverallSatisfactionRating(overallSatisfactionRating);
     cout << endl;
