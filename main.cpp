@@ -8,6 +8,7 @@ using namespace std;
 
 void commandMenu(int &menuChoice);
 void newReviewMenu(ReviewDB &foodieReviews);
+void getSearchParameter(string &searchParam);
 
 int main() {
 
@@ -15,6 +16,7 @@ int main() {
 
     bool stop = false;
     int menuChoice = 0;
+    string searchParam;
 
     cout << "Ben's Foodie Reviews" << endl;
     cout << endl;
@@ -32,7 +34,12 @@ int main() {
                 break;
             case 2:
                 // Print specified restaurant reviews
-                cout << "Print restaurant reviews case" << endl;
+                cout << "Print specified Restaurant Reviews" << endl;
+                getSearchParameter(searchParam);
+                cout << endl;
+                cout << "Results:" << endl;
+                cout << endl;
+                foodieReviews.printRestaurantReviews(searchParam);
                 break;
             case 3:
                 // Print specified food category reviews
@@ -140,8 +147,16 @@ void newReviewMenu(ReviewDB &foodieReviews) {
         overallSatisfactionRating = 1; // default value
     }
     review.setOverallSatisfactionRating(overallSatisfactionRating);
+    cout << endl;
 
     foodieReviews.insertReview(review);
-    review.print();
+
+}
+
+void getSearchParameter(string &searchParam) {
+
+    cout << "Search Parameter: > ";
+    cin.ignore();
+    getline(cin, searchParam);
 
 }
