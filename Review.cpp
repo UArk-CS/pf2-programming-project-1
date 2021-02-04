@@ -3,6 +3,7 @@
 //
 
 #include "Review.h"
+#include <iomanip>
 
 Review::Review() {
 
@@ -87,6 +88,8 @@ void Review::setOverallSatisfactionRating(int overallSatisfactionRating_) {
 }
 
 void Review::print() const {
+
+    cout << fixed << setprecision(2);
 
     cout << "Reviewer Name: " << reviewerName << endl;
     cout << "Restaurant Name: " << restaurantName << endl;

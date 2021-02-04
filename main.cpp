@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 #include "ReviewDB.h"
 using namespace std;
 
@@ -112,14 +113,17 @@ void newReviewMenu(ReviewDB &foodieReviews) {
 
     cout << "\tYour name: > ";
     getline(cin, reviewerName);
+    transform(reviewerName.begin(), reviewerName.end(), reviewerName.begin(), ::toupper);
     review.setReviewerName(reviewerName);
 
     cout << "\tRestaurant Name: > ";
     getline(cin, restaurantName);
+    transform(restaurantName.begin(), restaurantName.end(), restaurantName.begin(), ::toupper);
     review.setRestaurantName(restaurantName);
 
     cout << "\tFood Category: > ";
     getline(cin, foodCategory);
+    transform(foodCategory.begin(), foodCategory.end(), foodCategory.begin(), ::toupper);
     review.setFoodCategory(foodCategory);
 
     cout << endl;
@@ -163,5 +167,6 @@ void getSearchParameter(string &searchParam) {
     cout << "Search Parameter: > ";
     cin.ignore();
     getline(cin, searchParam);
+    transform(searchParam.begin(), searchParam.end(), searchParam.begin(), ::toupper);
 
 }
