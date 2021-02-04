@@ -43,7 +43,12 @@ int main() {
                 break;
             case 3:
                 // Print specified food category reviews
-                cout << "Print food cateogry reviews case" << endl;
+                cout << "Print specified Food Reviews" << endl;
+                getSearchParameter(searchParam);
+                cout << endl;
+                cout << "Results:" << endl;
+                cout << endl;
+                foodieReviews.printCategoryReviews(searchParam);
                 break;
             case 4:
                 // Print recent reviews

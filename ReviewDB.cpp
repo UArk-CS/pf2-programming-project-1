@@ -26,11 +26,11 @@ void ReviewDB::insertReview(Review &review_) {
 
 }
 
-void ReviewDB::printRestaurantReviews(const string &restaurant_) const {
+void ReviewDB::printRestaurantReviews(const string &restaurant) const {
 
     for (int i = 0; i < MAX_REVIEWDB_SIZE; i++) {
 
-        if (reviews[i].getRestaurantName() == restaurant_) {
+        if (reviews[i].getRestaurantName() == restaurant) {
 
             reviews[i].print();
             cout << endl;
@@ -41,7 +41,18 @@ void ReviewDB::printRestaurantReviews(const string &restaurant_) const {
 
 }
 
-void ReviewDB::printCategoryReviews() const {
+void ReviewDB::printCategoryReviews(const string &category) const {
+
+    for (int i = 0; i < MAX_REVIEWDB_SIZE; i++) {
+
+        if (reviews[i].getFoodCategory() == category) {
+
+            reviews[i].print();
+            cout << endl;
+
+        }
+
+    }
 
 }
 

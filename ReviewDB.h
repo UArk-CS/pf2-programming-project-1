@@ -21,8 +21,8 @@ public:
     void insertReview(Review &review_);
 
     // Print methods
-    void printRestaurantReviews(const string &restaurant_) const;
-    void printCategoryReviews() const;
+    void printRestaurantReviews(const string &restaurant) const;
+    void printCategoryReviews(const string &category) const;
     void printRecentReviews() const;
 
 private:
