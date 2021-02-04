@@ -56,6 +56,9 @@ void ReviewDB::printCategoryReviews(const string &category) const {
 
 }
 
-void ReviewDB::printRecentReviews() const {
+void ReviewDB::printRecentReview() const {
+
+    reviews[numOfReviews - 1].print();
+    cout << endl;
 
 }

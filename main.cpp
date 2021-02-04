@@ -52,7 +52,7 @@ int main() {
                 break;
             case 4:
                 // Print recent reviews
-                cout << "Print recent reviews case" << endl;
+                foodieReviews.printRecentReview();
                 break;
             case 5:
                 // Quit
@@ -75,7 +75,7 @@ void commandMenu(int &menuChoice) {
     cout <<"\t1. Enter new review" << endl;
     cout <<"\t2. Print specified Restaurant reviews" << endl;
     cout << "\t3. Print specified food category reviews" << endl;
-    cout << "\t4. Print recent reviews" << endl;
+    cout << "\t4. Print most recent review" << endl;
     cout << "\t5. Quit" << endl;
 
     cout << "Enter a selection (1-5): > ";

@@ -23,7 +23,7 @@ public:
     // Print methods
     void printRestaurantReviews(const string &restaurant) const;
     void printCategoryReviews(const string &category) const;
-    void printRecentReviews() const;
+    void printRecentReview() const;
 
 private:
     Review reviews[MAX_REVIEWDB_SIZE];
