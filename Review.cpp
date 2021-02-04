@@ -127,8 +127,8 @@ void Review::test() {
     test2.print();
     cout << endl;
 
-    cout << "test1 Delivery Cost: $" << test1.deliveryCost << endl;
-    cout << "test2 Reviewer Name: " << test2.reviewerName << endl;
+    cout << "test1 Delivery Cost: $" << test1.getDeliveryCost() << endl;
+    cout << "test2 Reviewer Name: " << test2.getReviewerName() << endl;
     cout << endl;
 
 }
