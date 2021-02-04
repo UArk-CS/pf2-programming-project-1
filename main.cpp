@@ -56,6 +56,15 @@ int main() {
                 foodieReviews.printRecentReview();
                 break;
             case 5:
+                // Test Review Class
+                cout << "Testing Review Class..." << endl;
+                cout << endl;
+                Review::test();
+                break;
+            case 6:
+                // Test ReviewDB Class
+                break;
+            case 7:
                 // Quit
                 stop = true;
                 break;
@@ -77,12 +86,14 @@ void commandMenu(int &menuChoice) {
     cout <<"\t2. Print specified Restaurant reviews" << endl;
     cout << "\t3. Print specified food category reviews" << endl;
     cout << "\t4. Print most recent review" << endl;
-    cout << "\t5. Quit" << endl;
+    cout << "\t5. Test Review Class" << endl;
+    cout << "\t6. Test ReviewDB Class" << endl;
+    cout << "\t7. Quit" << endl;
 
-    cout << "Enter a selection (1-5): > ";
+    cout << "Enter a selection (1-7): > ";
     cin >> menuChoice;
 
-    if (menuChoice < 1 || menuChoice > 5) {
+    if (menuChoice < 1 || menuChoice > 7) {
 
         cout << "Invalid selection. Please try again." << endl;
         cout << endl;

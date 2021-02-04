@@ -41,6 +41,9 @@ public:
     // Print
     void print() const;
 
+    // Test
+    static void test();
+
 private:
     string reviewerName;
     string restaurantName;

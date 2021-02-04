@@ -100,3 +100,29 @@ void Review::print() const {
     cout << "Overall Satisfaction Rating: " << overallSatisfactionRating << endl;
 
 }
+
+void Review::test() {
+
+    Review test1;
+    test1.setReviewerName("Ben W");
+    test1.setRestaurantName("Taco Bell");
+    test1.setFoodCategory("Mexican");
+    test1.setDeliveryCost(3.4);
+    test1.setDeliveryTimeRating(7);
+    test1.setFoodQualityRating(7);
+    test1.setOverallSatisfactionRating(8);
+    test1.print();
+    cout << endl;
+
+    Review test2(test1);
+    test2.setReviewerName("Josh G");
+    test2.setRestaurantName("Tropical Smoothie");
+    test2.setFoodCategory("Smoothie");
+    test2.print();
+    cout << endl;
+
+    cout << "test1 Delivery Cost: $" << test1.deliveryCost << endl;
+    cout << "test2 Reviewer Name: " << test2.reviewerName << endl;
+    cout << endl;
+
+}
