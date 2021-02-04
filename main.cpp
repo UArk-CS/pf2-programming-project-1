@@ -7,14 +7,17 @@
 #include "ReviewDB.h"
 using namespace std;
 
+// Function declarations
 void commandMenu(int &menuChoice);
 void createNewReview(ReviewDB &foodieReviews);
 void getSearchParameter(string &searchParam);
 
 int main() {
 
+    // Initialize ReviewDB object
     ReviewDB foodieReviews;
 
+    // Initialize variables
     bool stop = false;
     int menuChoice = 0;
     string searchParam;
@@ -22,10 +25,13 @@ int main() {
     cout << "Ben's Foodie Reviews" << endl;
     cout << endl;
 
+    // While loop to control continuous program
     while (!stop) {
 
+        // Get users menu choice
         commandMenu(menuChoice);
 
+        // Switch statement to control users menu choice
         switch (menuChoice) {
 
             case 1:
@@ -81,6 +87,7 @@ int main() {
 
 }
 
+// Prints commands and gets users choice
 void commandMenu(int &menuChoice) {
 
     cout << "Command Menu:" << endl;
@@ -107,6 +114,7 @@ void commandMenu(int &menuChoice) {
 
 }
 
+// Gets user input and creates full Review object to pass into ReviewDB object
 void createNewReview(ReviewDB &foodieReviews) {
 
     string reviewerName;
@@ -188,6 +196,7 @@ void createNewReview(ReviewDB &foodieReviews) {
 
 }
 
+// Gets search parameter for use in restaurant and food category review print methods
 void getSearchParameter(string &searchParam) {
 
     cout << "Search Parameter: > ";

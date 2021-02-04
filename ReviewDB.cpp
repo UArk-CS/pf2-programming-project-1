@@ -4,12 +4,15 @@
 
 #include "ReviewDB.h"
 
+// Constructor
 ReviewDB::ReviewDB() {
     numOfReviews = 0;
 }
 
+// Destructor
 ReviewDB::~ReviewDB() {}
 
+// Inserts review into array if it is not full
 void ReviewDB::insertReview(Review &review_) {
 
     if (numOfReviews < MAX_REVIEWDB_SIZE) {
@@ -26,6 +29,7 @@ void ReviewDB::insertReview(Review &review_) {
 
 }
 
+// Prints all reviews with the specified restaurant
 void ReviewDB::printRestaurantReviews(const string &restaurant) const {
 
     for (int i = 0; i < MAX_REVIEWDB_SIZE; i++) {
@@ -41,6 +45,7 @@ void ReviewDB::printRestaurantReviews(const string &restaurant) const {
 
 }
 
+// Prints all reviews with the specified food category
 void ReviewDB::printCategoryReviews(const string &category) const {
 
     for (int i = 0; i < MAX_REVIEWDB_SIZE; i++) {
@@ -56,6 +61,7 @@ void ReviewDB::printCategoryReviews(const string &category) const {
 
 }
 
+// Prints the most recent review
 void ReviewDB::printRecentReview() const {
 
     reviews[numOfReviews - 1].print();
@@ -63,6 +69,7 @@ void ReviewDB::printRecentReview() const {
 
 }
 
+// Test method
 void ReviewDB::test() {
 
     ReviewDB testArray;

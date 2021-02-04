@@ -5,6 +5,7 @@
 #include "Review.h"
 #include <iomanip>
 
+// Constructor
 Review::Review() {
 
     reviewerName = "";
@@ -17,6 +18,7 @@ Review::Review() {
 
 }
 
+// Copy Constructor
 Review::Review(const Review &copy) {
 
     reviewerName = copy.reviewerName;
@@ -29,8 +31,10 @@ Review::Review(const Review &copy) {
 
 }
 
+// Destructor
 Review::~Review() {}
 
+// Getters and Setters
 const string &Review::getReviewerName() const {
     return reviewerName;
 }
@@ -87,6 +91,7 @@ void Review::setOverallSatisfactionRating(int overallSatisfactionRating_) {
     Review::overallSatisfactionRating = overallSatisfactionRating_;
 }
 
+// Print method
 void Review::print() const {
 
     cout << fixed << setprecision(2);
@@ -101,6 +106,7 @@ void Review::print() const {
 
 }
 
+// Test method
 void Review::test() {
 
     Review test1;
