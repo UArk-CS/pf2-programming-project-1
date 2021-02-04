@@ -25,6 +25,9 @@ public:
     void printCategoryReviews(const string &category) const;
     void printRecentReview() const;
 
+    // Test
+    static void test();
+
 private:
     Review reviews[MAX_REVIEWDB_SIZE];
     int numOfReviews;

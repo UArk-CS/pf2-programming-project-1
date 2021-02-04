@@ -30,7 +30,6 @@ int main() {
 
             case 1:
                 // New review
-                cout << "New review case" << endl;
                 newReviewMenu(foodieReviews);
                 break;
             case 2:
@@ -63,6 +62,9 @@ int main() {
                 break;
             case 6:
                 // Test ReviewDB Class
+                cout << "Testing ReviewDB Class..." << endl;
+                cout << endl;
+                ReviewDB::test();
                 break;
             case 7:
                 // Quit

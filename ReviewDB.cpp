@@ -62,3 +62,48 @@ void ReviewDB::printRecentReview() const {
     cout << endl;
 
 }
+
+void ReviewDB::test() {
+
+    ReviewDB testArray;
+
+    Review test1;
+    test1.setReviewerName("Ben W");
+    test1.setRestaurantName("Taco Bell");
+    test1.setFoodCategory("Mexican");
+    test1.setDeliveryCost(3.4);
+    test1.setDeliveryTimeRating(7);
+    test1.setFoodQualityRating(7);
+    test1.setOverallSatisfactionRating(8);
+
+    Review test2(test1);
+    test2.setReviewerName("Josh G");
+    test2.setRestaurantName("Tropical Smoothie");
+    test2.setFoodCategory("Smoothie");
+    test2.setDeliveryCost(5.0);
+    test2.setOverallSatisfactionRating(10);
+
+    Review test3(test2);
+    test3.setReviewerName("Jackson D");
+    test3.setDeliveryTimeRating(8);
+
+    Review test4(test1);
+    test4.setReviewerName("Jackson P");
+    test4.setFoodQualityRating(6);
+    test4.setOverallSatisfactionRating(7);
+
+    testArray.reviews[0] = test1;
+    testArray.reviews[1] = test2;
+    testArray.reviews[2] = test3;
+    testArray.reviews[3] = test4;
+
+    cout << "Reviews for Tropical Smoothie..." << endl;
+    testArray.printRestaurantReviews("Tropical Smoothie");
+    cout << endl;
+
+    cout << "Reviews for Mexican food..." << endl;
+    testArray.printCategoryReviews("Mexican");
+    cout << endl;
+
+
+}
